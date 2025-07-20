@@ -1,3 +1,4 @@
+![EchoSweep 360 Radar Thumbnail](assets/echosweep-thumbnail.png)
 # 🚀 EchoSweep 360 — Arduino Radar Scanner
 
 **EchoSweep 360** is a microcontroller-based radar system that uses an ultrasonic sensor and a servo motor to scan the environment in a 180-degree arc. The system visualizes distances in real-time using a Python GUI interface. This project is ideal for beginners interested in robotics, embedded systems, or security scanning technologies.
