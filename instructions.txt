@@ -1,0 +1,99 @@
+
+
+## 🛠️ What You Need
+
+✅ Arduino IDE
+✅ Processing IDE
+✅ The downloaded `.zip` file
+✅ Your Arduino with:
+
+* Ultrasonic Sensor (TRIG on A0, ECHO on A1)
+* Servo Motor on SER1 (usually pin 11)
+
+---
+
+## 🎯 Step-by-Step Instructions
+
+### ✅ STEP 1: Install Processing IDE
+
+1. Go to [https://processing.org/download](https://processing.org/download)
+2. Download and install the version for your OS (Windows, Mac, Linux)
+3. Open the **Processing** app
+
+---
+
+### ✅ STEP 2: Upload Arduino Radar Code
+
+1. Open Arduino IDE
+2. Extract the ZIP you downloaded
+3. Open `arduino_radar.ino`
+4. Connect your Arduino with USB
+5. Select the correct **board** and **COM port** from `Tools → Board` and `Tools → Port`
+6. Click **Upload (→ arrow button)**
+
+✅ You’re done with Arduino — now close the Serial Monitor if it’s open.
+
+---
+
+### ✅ STEP 3: Run the Radar Display in Processing
+
+1. Open **Processing IDE**
+2. Go to `File → Open`, and choose the `radar_display.pde` from the ZIP you downloaded
+3. Inside Processing, **look for this line**:
+
+   ```java
+   myPort = new Serial(this, Serial.list()[0], 9600);
+   ```
+4. Now click **▶️ (Run button)** at the top
+
+### 🧪 If nothing shows, do this:
+
+#### 👉 Show your available serial ports:
+
+Replace the code **temporarily** like this:
+
+```java
+void setup() {
+  println(Serial.list());
+  exit();
+}
+```
+
+Then run it.
+
+#### ✅ You’ll see:
+
+```text
+[0] "COM1"
+[1] "COM3"   ← your Arduino might be this
+```
+
+Use the correct number in this line:
+
+```java
+myPort = new Serial(this, Serial.list()[1], 9600); // Use COM3 or your match
+```
+
+Then **remove** the `exit();` and run again.
+
+---
+
+### ✅ Result: You Should See This
+
+* A **radar sweep** in green color
+* A rotating line scanning in a circle
+* Dots appearing based on object distances
+
+If it doesn’t work, **no worries** — just tell me what’s happening, and I’ll help you fix it instantly.
+
+---
+
+### ❓ Need a Video Tutorial?
+
+I can write a script or show you what to search for on YouTube like:
+
+> “How to run Arduino with Processing radar”
+
+Or I can even record steps and send you.
+
+Would you like that?
